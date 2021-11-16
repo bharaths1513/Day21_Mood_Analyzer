@@ -1,14 +1,19 @@
 package Day21_Mood_Analyzer;
 
 public class MoodAnalyzer {
+	String message;
 
-	public MoodAnalyzer() {
+	// Refactor assigning message in parameterized constructor
+	public MoodAnalyzer(String message) {
+		this.message = message;
 	}
 
-	public String MoodAnalyzerr(String message) {
-		if (message.contains("Sad"))
-			return "SAD";
-		else
-			return "HAPPY";
+	public String analyzemood() {
+		if (this.message.contains("Sad")) {
+			return "Sad";
+		} else {
+			return "Happy";
+		}
 	}
+
 }

@@ -6,18 +6,12 @@ import org.junit.Test;
 import Day21_Mood_Analyzer.MoodAnalyzer;
 
 public class MoodAnalyzerTest {
-	@Test
-	public void given_SadMood_Should_Return_Sad() {
-		MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-		String mood = moodAnalyzer.MoodAnalyzerr("I am In a Sad Mood");
-		Assert.assertEquals("SAD", mood);
-
-	}
 
 	@Test
-	public void given_AnyMood_Should_Return_Happy() {
-		MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-		String mood = moodAnalyzer.MoodAnalyzerr("I am in Any Mood");
-		Assert.assertEquals("HAPPY", mood);
+	public void testingRefactor() {
+		MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am In a Sad Mood");
+		String mood = moodAnalyzer.analyzemood();
+		// Asserting The Result As Boolean Type True Or False
+		Assert.assertEquals("Sad", mood);
 	}
 }
