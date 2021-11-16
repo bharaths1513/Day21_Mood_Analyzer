@@ -13,4 +13,11 @@ public class MoodAnalyzerTest {
 		Assert.assertEquals("SAD", mood);
 
 	}
+
+	@Test
+	public void given_AnyMood_Should_Return_Happy() {
+		MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
+		String mood = moodAnalyzer.MoodAnalyzerr("I am in Any Mood");
+		Assert.assertEquals("HAPPY", mood);
+	}
 }
